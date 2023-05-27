@@ -1,1683 +1,760 @@
-html,
-body {
-    font-size: 15px;
-    color: #565656;
-    width: 100%;
-    padding: 0;
-    margin-left: 0;
-    margin-right: 0;
-    font-family: 'robotolight';
-    font-weight: 300;
-}
-
-img {
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-user-drag: none;
-    user-drag: none;
-}
-
-
-/*==========================================
-PRE LOADER 
-==========================================*/
-
-.preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #fefefe;
-    z-index: 99999;
-    height: 100%;
-    width: 100%;
-    overflow: hidden !important;
-}
-
-.loaded {
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    background-image: url(../images/preloading.gif);
-    background-repeat: no-repeat;
-    background-position: center;
-    -moz-background-size: cover;
-    background-size: cover;
-    margin: -20px 0 0 -20px;
-}
-a,
-a:hover,
-a:active,
-a:focus {
-    text-decoration: none;
-    outline: none;
-}
-a,
-button,
-a span {
-    -webkit-transition: 0.2s ease-in-out;
-    -o-transition: 0.2s ease-in-out;
-    transition: 0.2s ease-in-out;
-}
-.btn.extra-width {
-    padding: 13px 40px;
-}
-.btn:focus,
-.btn:active {
-    outline: inherit;
-}
-*,
-*:before,
-*:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    /*    direction: rtl;*/
-}
-p {
-    margin: 0 0 15px;
-}
-.clear {
-    clear: both;
-}
-/*ol,
-ul {
-    list-style: none;
-    padding: 0;
-}*/
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-img {
-    max-width: 100%;
-}
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
-.uneditable-input {
-    outline: none;
-}
-.form-control {
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    font-size: 16px;
-    height: 45px;
-}
-.form-control:focus {
-    border-color: rgb(21, 43, 165);
-}
-
-h1,
-h2,
-h3 {
-    /*font-family: 'Lane', sans-serif;*/
-    font-weight: 300;
-    margin: 0;
-}
-h4,
-h5 {
-    /*font-family: 'roboto', sans-serif;*/
-    font-weight: 300;
-    margin: 0;
-    line-height: 2rem;
-}
-h1 {
-    font-size: 3rem;
-    line-height: 4rem;
-    font-weight: 300;
-}
-h2 {
-    font-size: 2.5rem;
-    line-height: 3rem;
-    margin-bottom: .9rem;
-}
-h3 {
-    font-weight: 300;
-    margin-bottom: .9rem;
-    font-size: 2.1rem;
-    line-height: 2.5rem;
-}
-h4 {
-    font-size: 1.6rem;
-    line-height: 2.2rem;
-    margin-bottom: 1.1rem;
-}
-h5 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-}
-h6 {
-    font-size: 1rem;
-    margin-bottom: .9rem;
-}
-p {
-    line-height: 1.5rem;
-    font-size: 1.1rem;
-}
-p:last-child {
-    margin-bottom: 0px;
-}
-/*.home-wrap h1,*/
-.home-wrap h2,
-.home-wrap h3,
-.home-wrap h4,
-.home-wrap h5,
-.home-wrap p {
-    color: #ffffff;
-    /*font-family: 'roboto', sans-serif;*/
-}
-.text {
-    color: #333333;
-}
-.colorstext {
-    color: #f56363;
-}
-.coloricon i {
-    color: #f56363;
-}
-.colorsbg {
-    background: #f56363;
-    color: #ffffff;
-}
-
-.lightbg {
-    background-color: #f9f9f9;
-}
-.transition {
-    -webkit-transition: all 300ms linear;
-    -moz-transition: all 300ms linear;
-    -o-transition: all 300ms linear;
-    -ms-transition: all 300ms linear;
-    transition: all 300ms linear;
-}
-/*
-Section
-*/
-.sections {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    position: relative;
-    overflow: hidden;
-}
-.sections2 {
-    padding-top:40px;
-    padding-bottom:40px;
-    position: relative;
-    overflow: hidden;
-}
-.sections.footer {
-    padding-bottom: 80px;
-}
-section .subtitle h5 {
-    margin-top: 10px;
-    font-size: 1.3rem;
-    font-family: 'roboto', sans-serif;
-}
-.parallax-section {
-    max-width: 100%;
-    color: #ffffff;
-}
-section .title-half h2 {
-    font-size: 3rem;
-    line-height: 4rem;
-    font-weight: 300;
-    margin-bottom: 1.4rem;
-}
-section .subtitle-half h5 {
-    font-weight: 100;
-    font-size: 12px;
-}
-
-
-.heading {
-    margin-bottom: 4rem;
-}
-.overlay {
-    background-color: rgba(0, 0, 0, 0.3);
-    width: 100%;
-    min-height: 750px;
-}
-.overlay-fluid-block {
-    background-color: rgba(0, 0, 0, 0.15);
-    width: 100%;
-}
-.home-overlay-fluid {
-    background-color: rgba(41, 41, 41, 0.68);
-    width: 80%;
-    margin: auto;
-}
-.overlay-img {
-    background: rgba(0, 0, 0, 0.3);
-    width: 100%;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    color: #ffffff;
-}
-.no-padding {
-    padding: 0 !important;
-}
-.fluid-blocks-col {
-    padding: 70px 40px 0 80px;
-}
-.fluid-blocks-col-right {
-    padding: 70px 80px 0 40px;
-}
-/*
-Separator
-*/
-.separator {
-    height: 2px;
-    width: 80px;
-    margin: auto;
-    background: #ededed;
-}
-
-/*
-Button
-*/
-.btn-primary.active.focus,
-.btn-primary.active:focus,
-.btn-primary.active:hover,
-.btn-primary:active.focus,
-.btn-primary:active:focus,
-.btn-primary:active:hover,
-.open > .dropdown-toggle.btn-primary.focus,
-.open > .dropdown-toggle.btn-primary:focus,
-.open > .dropdown-toggle.btn-primary:hover,
-.btn-primary.focus,
-.btn-primary:focus,
-.btn-primary.disabled{
-    color: #ffffff;
-    background-color:rgb(60, 82, 207);
-    border-color: #f56363;
-}
-.btn-primary:hover {
-    background-color:rgb(60, 82, 207);
-}
-
-.btn {
-    display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.728571;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 3px;
-    width: 200px;
-    height: 50px;
-    padding: 1em;
-}
-
-.btn-default {
-    border-radius: 0px;
-    background: rgb(60, 82, 207);
-    color: #ededed;
-    border: 0;
-    padding: 12px 15px;
-    max-width:160px;
-    margin-top: 20px;
-}
-.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open>.dropdown-toggle.btn-default {
-    color: #fff;
-    background-color: rgb(21, 43, 165);
-    border-color:transparent;
-}
-
-
-.input-lg, .form-group-lg .form-control {
-    height: 46px;
-    width: 100%;
-    padding: 10px 16px;
-    font-size: 18px;
-    line-height: 1.33;
-    border-radius:0;
-}
-.btn-lg, .btn-group-lg>.btn {
-    font-size: 18px;
-    line-height: 26px;
-    border-radius:0;
-    background: rgb(21, 43, 165);
-    border: 0;
-    padding: 10px 25px;
-}
-.input-group button a i{
-    color:#fff;
-}
-
-
-/*
-Extra height css
-*/
-.margin-top-20 {
-    margin-top: 20px;
-}
-.margin-bottom-20 {
-    margin-bottom: 20px;
-}
-.margin-top-40 {
-    margin-top: 40px;
-}
-.margin-bottom-40 {
-    margin-bottom: 40px;
-}
-.margin-top-60 {
-    margin-top: 60px;
-}
-.margin-80 {
-    margin-top: 80px;
-    margin-bottom: 80px;
-}
-.margin-bottom-60 {
-    margin-bottom: 60px;
-}
-.margin-top-80 {
-    margin-top: 80px;
-}
-.margin-bottom-80 {
-    margin-bottom: 80px;
-}
-.padding-top-20 {
-    padding-top: 1.33rem;
-}
-.padding-bottom-20 {
-    padding-bottom: 1.33rem;
-}
-.padding-top-40 {
-    padding-top: 2.66rem;
-}
-.padding-bottom-40 {
-    padding-bottom: 2.66rem;
-}
-.padding-top-60 {
-    padding-top: 5rem;
-}
-.padding-bottom-60 {
-    padding-bottom: 5rem;
-}
-.padding-bottom-0 {
-    padding-bottom: 0;
-}
-/*padding*/
-.padding-twenty {
-    padding: 10px 0;
-}
-.padding-fourty {
-    padding: 20px 0;
-}
-.padding-sixty {
-    padding: 30px 0;
-}
-.padding-eighty {
-    padding: 40px 0;
-}
-h1 span {
-    color: #f56363;
-    font-weight: 400;
-}
-
-/*for placeholder changes*/
-
-input::-webkit-input-placeholder {
-    color: #CACACA;
-    font-size: 12px;
-    padding-top:2px;
-}
-input::-moz-placeholder {
-    color: #CACACA;
-    font-size: 12px;
-    padding-top:2px;
-}
-input:-ms-input-placeholder {
-    color: #CACACA;
-    font-size: 12px;
-    padding-top:2px;
-}
-textarea::-webkit-input-placeholder
-{
-    color: #CACACA;
-    font-size: 12px;
-    padding-top:2px;
-
-}
-textarea::-moz-input-placeholder
-{
-    color: #CACACA;
-    font-size: 12px;
-    padding-top:2px;
-}
-textarea::-ms-input-placeholder
-{
-    color: #CACACA;
-    font-size: 12px;
-    padding-top:2px;
-}
-
-
-/*for image bg*/
-
-
-/*.img-bg{
-  background: url(../images/home-msg.jpg) no-repeat center top fixed;
-   background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  width: 100%;
-  overflow: hidden;
-}*/
-
-/*For Our Global CSS*/
-.heading-content h1{
-    font-size:48px;
-    margin-bottom:40px;
-}
-
-/* For Social Wrapper */
-.social{
-    background:#000;
-    padding:10px 0;
-}
-.social-wrapper .social-icon a{
-    float:left;
-    font-size:13px;
-    color:#fff;
-}
-.social-wrapper .social-icon a:hover{
-    color:rgb(21, 43, 165);
-}
-.social-wrapper .social-icon a i{
-    padding-right:10px;
-}
-.social-wrapper .social-contact{
-    float:right;
-    font-size:13px;
-}
-.social-wrapper .social-contact a{
-    color:#fff;
-    margin-right:20px;
-}
-.social-wrapper .social-contact a:hover{
-    color:rgb(234, 237, 255);
-}
-.social-wrapper .social-contact a i{
-    padding-right:5px;
-}
-
-/*For Menu Style*/
-.navbar-default {
-    background-color: transparent;
-    border-color: transparent;
-    border-radius:0;
-    padding-top:20px;
-}
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
-    color: rgb(60, 82, 207);
-    background-color:transparent;
-}
-.navbar-default .navbar-nav>li>a {
-    color: #000;
-    font-size:14px;
-    font-weight:600;
-	text-transform:uppercase;
-}
-.navbar-default .navbar-nav li a :hover{
-    color: rgb(60, 82, 207);
-}
-.navbar-default .collapse .login a{
-    color: rgb(60, 82, 207);
-    border: 1px solid rgb(60, 82, 207);
-    border-radius: 20px;
-    padding: 4px 30px;
-    font-size: 12px;
-    margin-top: 10px;
-    margin-left: 30px;
-    display:inline-block;
-    overflow:hidden;
-}
-.navbar-default .collapse .login:hover a{
-    background-color: rgb(60, 82, 207);
-    color:#fff;
-}
-.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
-    color: rgb(60, 82, 207);
-    background-color: transparent;
-}
-.navbar-brand{
-	margin-top:-5px;	
-}
-
-
-/*For Home Section*/
-.home{
-    background:url(https://i.gifer.com/AvTp.gif) no-repeat center center;
-    color:#000;
-	background-size:cover;
-	-webkit-background-size:cover;
-	-moz-background-size:cover;
-	-o-background-size:cover;
-	-ms-background-size:cover;
-}
-.home-wrapper{
-    padding:180px 0px;
-    overflow:hidden;
-}
-.home-content h1{
-    font-size:54px;
-    font-weight:700;
-    margin-bottom: 30px;
-    color: #000000;
-}
-.home-content p{
-    margin-bottom: 30px;
-    color: #fff;
-}
-.home-content .home-contact{
-    margin-top: 90px;
-}
-
-.home-contact .input-group{display: block;}
-.home-content .input-group .form-control {
-    position: relative;
-    z-index: 2;
-    float: left;
-    width: 65%;
-    margin-bottom: 0;
-    height: 60px;
-
-}
-.home-content .home-contact input[type="text"]{
-    color:#3c52cf;
-}
-.home-content .home-contact input[type="submit"]{
-    display:inline-block;
-    width:35%;
-    background:#3c52cf;
-    color:#fff;
-	border: 0px;
-}
-.home-content .home-contact input[type="submit"]:hover{
-	background-color: rgb(60, 82, 207);
-}
-.home-contact p{
-    margin-top: 20px;
-    color:#000;
-    font-size:15px;
-}
-.form-control {
-    border: 1px solid #DEDEDE;
-    height:45px;
-    border-radius: 0px;
-    margin-right: -3px;
-}
-.head_title {
-    margin-bottom: 40px;
-}
-.head_title p {
-    max-width: 55%;
-    margin: 10px auto;
-    padding-bottom: 20px;
-}
-
-/* features  section */
-
-.single_features_left img{
-    height:460px;
-}
-.single_features_right {
-    margin-top:10%;
-}
-
-.single_features_right h2 {
-	margin-bottom: 40px;
-    font-size:40px;
-    color:#222222;
-}
-
-.single_features_right p{
-    font-size:18px;
-}
-.single_features_right ul li{
-    font-size:18px;
-    margin-top:3%;
-}
-
-/* Service2 Section */
-.service2{}
-.service_content{
-    width: 90%;
-    margin: 0 auto;
-}
-
-.single_service2{
-    margin-top: 90px;
-}
-.single_service_left{
-    display: inline-block;
-}
-.single_service2 img{
-    width: 70px;
-    margin-top: -70px;
-
-}
-
-.single_service2 .single_service_right{
-    display: inline-block;
-    width: 70%;
-    padding-left: 20px;
-    overflow: hidden;
-}
-.single_service_right h2{
-
-    font-size:24px;
-    text-transform:uppercase;
-    color:#222222;
-    margin: 0;
-}
-.single_service_right p{
-    font-size:18px;
-    color:#777777;
-}
-
-
-
-
-
-
-/*For Price Section*/
-.cd-header {
-    height: 100px;
-    line-height: 170px;
-    position: relative;
-}
-.cd-header h1 {
-    text-align: center;
-    color: #FFFFFF;
-    font-size: 2.2rem;
-}
-@media only screen and (min-width: 768px) {
-    .cd-header {
-        height: 160px;
-        line-height: 280px;
-    }
-    .cd-header h1 {
-        font-size: 3.6rem;
-        font-weight: 300;
-    }
-}
-
-.cd-pricing-container {
-    width: 90%;
-    max-width: 1170px;
-    margin: 4em auto;
-}
-@media only screen and (min-width: 768px) {
-    .cd-pricing-container {
-        margin: 4em auto;
-    }
-    .cd-pricing-container.cd-full-width {
-        width: 100%;
-        max-width: none;
-    }
-}
-
-.cd-pricing-switcher {
-    text-align: center;
-}
-.cd-pricing-switcher .fieldset {
-    display: inline-block;
-    position: relative;
-    padding: 2px;
-    border-radius: 50em;
-    background:rgb(21, 43, 165);
-}
-.cd-pricing-switcher input[type="radio"] {
-    position: absolute;
-    opacity: 0;
-}
-.cd-pricing-switcher label {
-    position: relative;
-    z-index: 1;
-    display: inline-block;
-    float: left;
-    width: 90px;
-    height: 35px;
-    line-height: 40px;
-    cursor: pointer;
-    font-size:12px;
-    color:#fff;
-}
-.cd-pricing-switcher .cd-switch {
-    /* floating background */
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    height: 40px;
-    width: 90px;
-    background-color: #0c1f28;
-    border-radius: 50em;
-    -webkit-transition: -webkit-transform 0.5s;
-    -moz-transition: -moz-transform 0.5s;
-    transition: transform 0.5s;
-}
-.cd-pricing-switcher input[type="radio"]:checked + label + .cd-switch,
-.cd-pricing-switcher input[type="radio"]:checked + label:nth-of-type(n) + .cd-switch {
-    /* use label:nth-of-type(n) to fix a bug on safari with multiple adjacent-sibling selectors*/
-    -webkit-transform: translateX(90px);
-    -moz-transform: translateX(90px);
-    -ms-transform: translateX(90px);
-    -o-transform: translateX(90px);
-    transform: translateX(90px);
-}
-
-.no-js .cd-pricing-switcher {
-    display: none;
-}
-
-.cd-pricing-list {
-    margin: 2em 0 0;
-}
-.cd-pricing-list > li {
-    position: relative;
-    margin-bottom: 1em;
-}
-@media only screen and (min-width: 768px) {
-    .cd-pricing-list {
-        margin: 3em 0 0;
-    }
-    .cd-pricing-list:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-    .cd-pricing-list > li {
-        width: 33.3333333333%;
-        float: left;
-    }
-    .cd-has-margins .cd-pricing-list > li {
-        width: 32.3333333333%;
-        float: left;
-        margin-right: 1.5%;
-    }
-    .cd-has-margins .cd-pricing-list > li:last-of-type {
-        margin-right: 0;
-    }
-}
-
-.cd-pricing-wrapper {
-    /* this is the item that rotates */
-    position: relative;
-}
-.touch .cd-pricing-wrapper {
-    /* fix a bug on IOS8 - rotating elements dissapear*/
-    -webkit-perspective: 2000px;
-    -moz-perspective: 2000px;
-    perspective: 2000px;
-}
-.cd-pricing-wrapper.is-switched .is-visible {
-    /* totate the tables - anticlockwise rotation */
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-    -o-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-    -webkit-animation: cd-rotate 0.5s;
-    -moz-animation: cd-rotate 0.5s;
-    animation: cd-rotate 0.5s;
-}
-.cd-pricing-wrapper.is-switched .is-hidden {
-    /* totate the tables - anticlockwise rotation */
-    -webkit-transform: rotateY(0);
-    -moz-transform: rotateY(0);
-    -ms-transform: rotateY(0);
-    -o-transform: rotateY(0);
-    transform: rotateY(0);
-    -webkit-animation: cd-rotate-inverse 0.5s;
-    -moz-animation: cd-rotate-inverse 0.5s;
-    animation: cd-rotate-inverse 0.5s;
-    opacity: 0;
-}
-.cd-pricing-wrapper.is-switched .is-selected {
-    opacity: 1;
-}
-.cd-pricing-wrapper.is-switched.reverse-animation .is-visible {
-    /* invert rotation direction - clockwise rotation */
-    -webkit-transform: rotateY(-180deg);
-    -moz-transform: rotateY(-180deg);
-    -ms-transform: rotateY(-180deg);
-    -o-transform: rotateY(-180deg);
-    transform: rotateY(-180deg);
-    -webkit-animation: cd-rotate-back 0.5s;
-    -moz-animation: cd-rotate-back 0.5s;
-    animation: cd-rotate-back 0.5s;
-}
-.cd-pricing-wrapper.is-switched.reverse-animation .is-hidden {
-    /* invert rotation direction - clockwise rotation */
-    -webkit-transform: rotateY(0);
-    -moz-transform: rotateY(0);
-    -ms-transform: rotateY(0);
-    -o-transform: rotateY(0);
-    transform: rotateY(0);
-    -webkit-animation: cd-rotate-inverse-back 0.5s;
-    -moz-animation: cd-rotate-inverse-back 0.5s;
-    animation: cd-rotate-inverse-back 0.5s;
-    opacity: 0;
-}
-.cd-pricing-wrapper.is-switched.reverse-animation .is-selected {
-    opacity: 1;
-}
-.cd-pricing-wrapper > li {
-    background-color: #FFFFFF;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    /* Firefox bug - 3D CSS transform, jagged edges */
-    outline: 1px solid #ededed;
-}
-.cd-pricing-wrapper > li::after {
-    /* subtle gradient layer on the right - to indicate it's possible to scroll */
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 50px;
-    pointer-events: none;
-    background: -webkit-linear-gradient( right , #FFFFFF, rgba(255, 255, 255, 0));
-    background: linear-gradient(to left, #FFFFFF, rgba(255, 255, 255, 0));
-}
-.cd-pricing-wrapper > li.is-ended::after {
-    /* class added in jQuery - remove the gradient layer when it's no longer possible to scroll */
-    display: none;
-}
-.cd-pricing-wrapper .is-visible {
-    /* the front item, visible by default */
-    position: relative;
-    z-index: 5;
-}
-.cd-pricing-wrapper .is-hidden {
-    /* the hidden items, right behind the front one */
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-    -o-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-}
-.cd-pricing-wrapper .is-selected {
-    /* the next item that will be visible */
-    z-index: 3 !important;
-}
-@media only screen and (min-width: 768px) {
-    .cd-pricing-wrapper > li::before {
-        /* separator between pricing tables - visible when number of tables > 3 */
-        content: '';
-        position: absolute;
-        z-index: 6;
-        left: -1px;
-        top: 50%;
-        bottom: auto;
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
-        transform: translateY(-50%);
-        height: 50%;
-        width: 1px;
-        background-color: #b1d6e8;
-    }
-    .cd-pricing-wrapper > li::after {
-        /* hide gradient layer */
-        display: none;
-    }
-    .cd-popular .cd-pricing-wrapper > li {
-        box-shadow: inset 0 0 0 3px #e97d68;
-    }
-    .cd-has-margins .cd-pricing-wrapper > li, .cd-has-margins .cd-popular .cd-pricing-wrapper > li {
-        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-    }
-    .cd-secondary-theme .cd-pricing-wrapper > li {
-        background: #3aa0d1;
-        background: -webkit-linear-gradient( bottom , #3aa0d1, #3ad2d1);
-        background: linear-gradient(to top, #3aa0d1, #3ad2d1);
-    }
-    .cd-secondary-theme .cd-popular .cd-pricing-wrapper > li {
-        background: #e97d68;
-        background: -webkit-linear-gradient( bottom , #e97d68, #e99b68);
-        background: linear-gradient(to top, #e97d68, #e99b68);
-        box-shadow: none;
-    }
-    :nth-of-type(1) > .cd-pricing-wrapper > li::before {
-        /* hide table separator for the first table */
-        display: none;
-    }
-    .cd-has-margins .cd-pricing-wrapper > li {
-        border-radius: 4px 4px 6px 6px;
-    }
-    .cd-has-margins .cd-pricing-wrapper > li::before {
-        display: none;
-    }
-}
-@media only screen and (min-width: 1500px) {
-    .cd-full-width .cd-pricing-wrapper > li {
-        padding: 2.5em 0;
-    }
-}
-
-.no-js .cd-pricing-wrapper .is-hidden {
-    position: relative;
-    -webkit-transform: rotateY(0);
-    -moz-transform: rotateY(0);
-    -ms-transform: rotateY(0);
-    -o-transform: rotateY(0);
-    transform: rotateY(0);
-    margin-top: 1em;
-}
-
-@media only screen and (min-width: 320px) {
-    .cd-popular .cd-pricing-wrapper > li::before {
-        /* hide table separator for .cd-popular table */
-        display: none;
-    }
-
-    .cd-popular + li .cd-pricing-wrapper > li::before {
-        /* hide table separator for tables following .cd-popular table */
-        display: none;
-    }
-}
-.cd-pricing-header {
-    position: relative;
-    z-index: 1;
-    height: 80px;
-    padding: 1em;
-    pointer-events: none;
-    color: #FFFFFF;
-    border:1px solid rgb(21, 43, 165);
-}
-.cd-pricing-header h2 {
-    margin-bottom: 3px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-.cd-popular .cd-pricing-header {
-    background-color: #e97d68;
-}
-@media only screen and (min-width: 320px) {
-    .cd-pricing-header {
-        height: auto;
-        padding: 1.9em 0.9em 1.6em;
-        pointer-events: auto;
-        text-align: center;
-        color: #000;
-        font-size:14px;
-    }
-    .cd-popular .cd-pricing-header {
-        color:#fff;
-        background:rgb(21, 43, 165);
-    }
-    .cd-secondary-theme .cd-pricing-header {
-        color: #FFFFFF;
-    }
-    .cd-pricing-header h2 {
-        font-size:14px;
-        letter-spacing: 2px;
-    }
-}
-
-.cd-currency, .cd-value {
-    font-size: 3rem;
-    font-weight: 300;
-}
-
-.cd-duration {
-    font-weight: 700;
-    font-size: 1.3rem;
-    color: #8dc8e4;
-    text-transform: uppercase;
-}
-.cd-popular .cd-duration {
-    color: #f3b6ab;
-}
-.cd-duration::before {
-    content: '/';
-    margin-right: 2px;
-}
-
-@media only screen and (min-width: 320px) {
-    .cd-value {
-        font-size: 23px;
-        font-weight: 300;
-    }
-
-    .cd-currency, .cd-duration {
-        color:#000;
-    }
-    .cd-popular .cd-currency, .cd-popular .cd-duration {
-        color: #ededed;
-    }
-    .cd-secondary-theme .cd-currency, .cd-secondary-theme .cd-duration {
-        color: #2e80a7;
-    }
-    .cd-secondary-theme .cd-popular .cd-currency, .cd-secondary-theme .cd-popular .cd-duration {
-        color: #ba6453;
-    }
-
-    .cd-currency {
-        display: inline-block;
-        margin-top:0;
-        vertical-align: top;
-        font-size: 23px;
-        font-weight: 700;
-    }
-
-    .cd-duration {
-        font-size: 1rem;
-    }
-}
-.cd-pricing-body {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-}
-.is-switched .cd-pricing-body {
-    /* fix a bug on Chrome Android */
-    overflow: hidden;
-}
-@media only screen and (min-width: 320px) {
-    .cd-pricing-body {
-        overflow-x: visible;
-    }
-}
-
-.cd-pricing-features {
-    width: 600px;
-}
-.cd-pricing-features:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-.cd-pricing-features li {
-    width: 100px;
-    float: left;
-    padding: 1.6em 1em;
-    font-size:1rem;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.cd-pricing-features em {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 600;
-}
-@media only screen and (min-width: 320px) {
-    .cd-pricing-features {
-        width: auto;
-    }
-    .cd-pricing-features li {
-        float: none;
-        width: auto;
-        padding: 1em;
-    }
-    .cd-popular .cd-pricing-features li {
-        margin: 0 3px;
-    }
-
-    .cd-pricing-features em {
-        display: inline-block;
-        margin-bottom: 0;
-        margin-right:5px;
-    }
-    .cd-has-margins .cd-popular .cd-pricing-features li, .cd-secondary-theme .cd-popular .cd-pricing-features li {
-        margin: 0;
-    }
-    .cd-secondary-theme .cd-pricing-features li {
-        color: #FFFFFF;
-    }
-    .cd-secondary-theme .cd-pricing-features li:nth-of-type(2n+1) {
-        background-color: transparent;
-    }
-}
-
-.cd-pricing-footer {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    /* on mobile it covers the .cd-pricing-header */
-    height: 80px;
-    width: 100%;
-
-}
-.cd-pricing-footer a {
-    background:rgb(21, 43, 165);
-    color:#fff;
-}
-
-.cd-pricing-footer::after {
-    /* right arrow visible on mobile */
-    content: '';
-    position: absolute;
-    right: 1em;
-    top: 50%;
-    bottom: auto;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    height: 20px;
-    width: 20px;
-    background:red;
-}
-@media only screen and (min-width: 320px) {
-    .cd-pricing-footer {
-        position: relative;
-        height: auto;
-        padding: 1.8em 0;
-        text-align: center;
-    }
-    .cd-pricing-footer::after {
-        /* hide arrow */
-        display: none;
-    }
-    .cd-has-margins .cd-pricing-footer {
-        padding-bottom: 0;
-    }
-}
-
-.cd-select {
-    position: relative;
-    z-index: 1;
-    display: block;
-    height: 100%;
-    overflow: hidden;
-    text-indent: 100%;
-    white-space: nowrap;
-    color:#ffffff;
-}
-@media only screen and (min-width: 320px) {
-    .cd-select {
-        position: static;
-        display: inline-block;
-        height: auto;
-        padding: 1.3em 3em;
-        color: #fcfcfc;
-        border-radius: 2px;
-        font-size: 1rem;
-        text-indent: 0;
-        text-transform: uppercase;
-    }
-    .no-touch .cd-select:hover {
-        color: #f8f8f8;
-    }
-    .cd-popular .cd-select {
-        color: #ffffff;
-        background: rgb(34, 67, 253);
-    }
-    .no-touch .cd-popular .cd-select:hover {
-        color:#ebe0e0;
-    }
-    .cd-secondary-theme .cd-popular .cd-select {
-        color: #0c1f28;
-    }
-    .no-touch .cd-secondary-theme .cd-popular .cd-select:hover {
-        color: #112e3c;
-    }
-    .cd-has-margins .cd-select {
-        display: block;
-        padding: 1.7em 0;
-        border-radius: 0 0 4px 4px;
-    }
-}
-
-/* -------------------------------- 
-
-xkeyframes 
-
--------------------------------- */
-@-webkit-keyframes cd-rotate {
-    0% {
-        -webkit-transform: perspective(2000px) rotateY(0);
-    }
-    70% {
-        /* this creates the bounce effect */
-        -webkit-transform: perspective(2000px) rotateY(200deg);
-    }
-    100% {
-        -webkit-transform: perspective(2000px) rotateY(180deg);
-    }
-}
-@-moz-keyframes cd-rotate {
-    0% {
-        -moz-transform: perspective(2000px) rotateY(0);
-    }
-    70% {
-        /* this creates the bounce effect */
-        -moz-transform: perspective(2000px) rotateY(200deg);
-    }
-    100% {
-        -moz-transform: perspective(2000px) rotateY(180deg);
-    }
-}
-@keyframes cd-rotate {
-    0% {
-        -webkit-transform: perspective(2000px) rotateY(0);
-        -moz-transform: perspective(2000px) rotateY(0);
-        -ms-transform: perspective(2000px) rotateY(0);
-        -o-transform: perspective(2000px) rotateY(0);
-        transform: perspective(2000px) rotateY(0);
-    }
-    70% {
-        /* this creates the bounce effect */
-        -webkit-transform: perspective(2000px) rotateY(200deg);
-        -moz-transform: perspective(2000px) rotateY(200deg);
-        -ms-transform: perspective(2000px) rotateY(200deg);
-        -o-transform: perspective(2000px) rotateY(200deg);
-        transform: perspective(2000px) rotateY(200deg);
-    }
-    100% {
-        -webkit-transform: perspective(2000px) rotateY(180deg);
-        -moz-transform: perspective(2000px) rotateY(180deg);
-        -ms-transform: perspective(2000px) rotateY(180deg);
-        -o-transform: perspective(2000px) rotateY(180deg);
-        transform: perspective(2000px) rotateY(180deg);
-    }
-}
-@-webkit-keyframes cd-rotate-inverse {
-    0% {
-        -webkit-transform: perspective(2000px) rotateY(-180deg);
-    }
-    70% {
-        /* this creates the bounce effect */
-        -webkit-transform: perspective(2000px) rotateY(20deg);
-    }
-    100% {
-        -webkit-transform: perspective(2000px) rotateY(0);
-    }
-}
-@-moz-keyframes cd-rotate-inverse {
-    0% {
-        -moz-transform: perspective(2000px) rotateY(-180deg);
-    }
-    70% {
-        /* this creates the bounce effect */
-        -moz-transform: perspective(2000px) rotateY(20deg);
-    }
-    100% {
-        -moz-transform: perspective(2000px) rotateY(0);
-    }
-}
-@keyframes cd-rotate-inverse {
-    0% {
-        -webkit-transform: perspective(2000px) rotateY(-180deg);
-        -moz-transform: perspective(2000px) rotateY(-180deg);
-        -ms-transform: perspective(2000px) rotateY(-180deg);
-        -o-transform: perspective(2000px) rotateY(-180deg);
-        transform: perspective(2000px) rotateY(-180deg);
-    }
-    70% {
-        /* this creates the bounce effect */
-        -webkit-transform: perspective(2000px) rotateY(20deg);
-        -moz-transform: perspective(2000px) rotateY(20deg);
-        -ms-transform: perspective(2000px) rotateY(20deg);
-        -o-transform: perspective(2000px) rotateY(20deg);
-        transform: perspective(2000px) rotateY(20deg);
-    }
-    100% {
-        -webkit-transform: perspective(2000px) rotateY(0);
-        -moz-transform: perspective(2000px) rotateY(0);
-        -ms-transform: perspective(2000px) rotateY(0);
-        -o-transform: perspective(2000px) rotateY(0);
-        transform: perspective(2000px) rotateY(0);
-    }
-}
-@-webkit-keyframes cd-rotate-back {
-    0% {
-        -webkit-transform: perspective(2000px) rotateY(0);
-    }
-    70% {
-        /* this creates the bounce effect */
-        -webkit-transform: perspective(2000px) rotateY(-200deg);
-    }
-    100% {
-        -webkit-transform: perspective(2000px) rotateY(-180deg);
-    }
-}
-@-moz-keyframes cd-rotate-back {
-    0% {
-        -moz-transform: perspective(2000px) rotateY(0);
-    }
-    70% {
-        /* this creates the bounce effect */
-        -moz-transform: perspective(2000px) rotateY(-200deg);
-    }
-    100% {
-        -moz-transform: perspective(2000px) rotateY(-180deg);
-    }
-}
-@keyframes cd-rotate-back {
-    0% {
-        -webkit-transform: perspective(2000px) rotateY(0);
-        -moz-transform: perspective(2000px) rotateY(0);
-        -ms-transform: perspective(2000px) rotateY(0);
-        -o-transform: perspective(2000px) rotateY(0);
-        transform: perspective(2000px) rotateY(0);
-    }
-    70% {
-        /* this creates the bounce effect */
-        -webkit-transform: perspective(2000px) rotateY(-200deg);
-        -moz-transform: perspective(2000px) rotateY(-200deg);
-        -ms-transform: perspective(2000px) rotateY(-200deg);
-        -o-transform: perspective(2000px) rotateY(-200deg);
-        transform: perspective(2000px) rotateY(-200deg);
-    }
-    100% {
-        -webkit-transform: perspective(2000px) rotateY(-180deg);
-        -moz-transform: perspective(2000px) rotateY(-180deg);
-        -ms-transform: perspective(2000px) rotateY(-180deg);
-        -o-transform: perspective(2000px) rotateY(-180deg);
-        transform: perspective(2000px) rotateY(-180deg);
-    }
-}
-@-webkit-keyframes cd-rotate-inverse-back {
-    0% {
-        -webkit-transform: perspective(2000px) rotateY(180deg);
-    }
-    70% {
-        /* this creates the bounce effect */
-        -webkit-transform: perspective(2000px) rotateY(-20deg);
-    }
-    100% {
-        -webkit-transform: perspective(2000px) rotateY(0);
-    }
-}
-@-moz-keyframes cd-rotate-inverse-back {
-    0% {
-        -moz-transform: perspective(2000px) rotateY(180deg);
-    }
-    70% {
-        /* this creates the bounce effect */
-        -moz-transform: perspective(2000px) rotateY(-20deg);
-    }
-    100% {
-        -moz-transform: perspective(2000px) rotateY(0);
-    }
-}
-@keyframes cd-rotate-inverse-back {
-    0% {
-        -webkit-transform: perspective(2000px) rotateY(180deg);
-        -moz-transform: perspective(2000px) rotateY(180deg);
-        -ms-transform: perspective(2000px) rotateY(180deg);
-        -o-transform: perspective(2000px) rotateY(180deg);
-        transform: perspective(2000px) rotateY(180deg);
-    }
-    70% {
-        /* this creates the bounce effect */
-        -webkit-transform: perspective(2000px) rotateY(-20deg);
-        -moz-transform: perspective(2000px) rotateY(-20deg);
-        -ms-transform: perspective(2000px) rotateY(-20deg);
-        -o-transform: perspective(2000px) rotateY(-20deg);
-        transform: perspective(2000px) rotateY(-20deg);
-    }
-    100% {
-        -webkit-transform: perspective(2000px) rotateY(0);
-        -moz-transform: perspective(2000px) rotateY(0);
-        -ms-transform: perspective(2000px) rotateY(0);
-        -o-transform: perspective(2000px) rotateY(0);
-        transform: perspective(2000px) rotateY(0);
-    }
-}
-
-
-.fa-check-circle{
-    color:rgb(21, 43, 165);
-}
-.fa-remove{
-    color:red;
-}
-
-/*For portfolio Section*/
-.portfolio{
-    background: url(../images/bg.png) no-repeat top center fixed;
-    background-size:cover;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -ms-background-size:cover;
-    width: 100%;
-    overflow: hidden;
-}
-
-.community-edition{
-    background:#fff;
-    padding:40px 15px;
-    border:1px solid #ececec;
-    box-shadow:2px 2px 5px 0 rgba(55,50,40, .20);
-    -webkit-box-shadow:2px 2px 5px 0 rgba(55,50,40, .20);
-    -moz-box-shadow:2px 2px 5px 0 rgba(55,50,40, .20);
-    -o-box-shadow:2px 2px 5px 0 rgba(55,50,40, .20);
-    -ms-box-shadow:2px 2px 5px 0 rgba(55,50,40, .20);
-    transition:.3s ease-in-out;
-    -moz-transition:.3s ease-in-out;
-    -webkit-transition:.3s ease-in-out;
-}
-.community-edition:hover{
-    background:rgb(21, 43, 165);
-    color:#fff;
-}
-.community-edition:hover i {
-    color:#fff;
-}
-.community-edition:hover h4 {
-    color:#fff;
-}
-.community-edition:hover p {
-    color:#fff;
-}
-
-.community-edition i{
-    font-size:60px;
-    color:rgb(21, 43, 165);
-    margin-bottom: 20px;
-}
-.community-edition h4{
-    font-size:16px;
-    color:#000;
-    text-transform:uppercase;
-    font-weight:600;
-    letter-spacing:1px;
-    margin-top:15px;
-}
-.community-edition p{
-    font-size:12px;
-    color:#777777;
-}
-.portfolio-wrapper2{
-    margin-top:25px;
-}
-
-/* Contact Section */
-
-.contact_content{
-    width: 80%;
-    margin: 50px auto;
-}
-.single_left_contact p{
-    font-family:''titillium_weblight;
-    font-size:18px;
-}
-
-.single_right_contact .contact_address span{
-    font-size:18px;
-    display:block;
-    line-height: 30px;
-}
-.single_right_contact .contact_socail_bookmark{
-    margin-left:-15px;
-    margin-top:20px;
-}
-.single_right_contact .contact_socail_bookmark a {
-    margin-left:15px;
-    transition:.5s;
-}
-.single_right_contact .contact_socail_bookmark a i{
-    color:#222222;
-    border:1px solid #777777;
-    width:40px;
-    height:40px;
-    line-height:40px;
-    text-align:center;
-    border-radius:50%;
-}
-.single_right_contact .contact_socail_bookmark a:hover i{
-    color:#8a3b6a;
-    border:1px solid #8a3b6a;
-}
-
-
-
-/*For Footer Menu Section*/
-
-.footer-menu{
-    background:#efefef;
-    color:#000;
-    border-bottom:1px solid #cfcdcd;
-}
-.menu-item{
-    margin-bottom:20px;
-}
-.menu-item h5{
-    font-size:16px;
-    font-family: 'robotoregular';
-    font-weight:500;
-}
-.menu-item p{
-    font-size:12px;
-}
-.menu-item ul li{
-    font-size:13px;
-    text-transform:uppercase;
-    font-family: 'robotolight';
-    margin-bottom:10px;
-}
-
-.menu-item .form-control {
-    position: relative;
-    z-index: 2;
-    float: left;
-    width: 65%;
-    margin-bottom: 0;
-
-}
-.menu-item input[type="text"]{
-    color:rgb(21, 43, 165);
-}
-.menu-item input[type="submit"]{
-    display:inline-block;
-    width:35%;
-    background:rgb(21, 43, 165);
-    color:#fff;
-	border:0px;
-}
-.menu-item input[type="submit"]:hover{
-	background-color: rgb(60, 82, 207);
-}
-
-/*For Footer Section*/
-.footer{
-
-    color:#000;
-}
-.footer-wrapper{
-    padding:20px 0px;
-    display:block;
-}
-.footer-brand{
-    float:left;
-}
-.copyright{
-    text-align:right;
-}
-.copyright p{
-    font-size: 1.125rem;
-    margin-bottom: 1px;
-    padding: 20px 0px;
-}
-.copyright p i{
-    color:#ff0000;
-}.copyright p a{
-    color:#32E10A;
-}
-
-
-/*scollup icon*/
-
-.scrollup {
-	width: 30px;
-	height: 30px;
-	border-radius: 15px;
-	opacity: .3;
-	position: fixed;
-	bottom: 20px;
-	right: 25px;
-	color: #fff;
-	cursor: pointer;
-	background-color: #000;
-	z-index: 10;
-	transition: opacity .5s, background-color .5s;
-	-moz-transition: opacity .5s, background-color .5s;
-	-webkit-transition: opacity .5s, background-color .5s;
-}
-.scrollup:hover {
-	background: rgb(21, 43, 165);
-	opacity: 1;
-}
-.scrollup i {
-	font-size: 13px;
-	position: absolute;
-	opacity: 1;
-	color: #fff;
-	left: 50%;
-	top: 50%;
-	margin-top: -7px;
-	margin-left: -6px;
-	text-decoration: none;
-
-}
-
-
+<!DOCTYPE html>
+<html class="no-js" lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="icon" type="image/png" href="https://static.vecteezy.com/system/resources/previews/008/470/445/original/checkmark-or-approved-or-verified-icon-or-symbol-free-png.png"/>
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <!-- Site Metas -->
+        <title>Shopping de Sites 👋 </title>
+        <meta property="og:image" content="assets/images/catsa.jpeg">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta http-equiv="Content-Language" content="pt-br, en, fr, it">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Empresas de software em sorocaba">
+        <meta name="description" content="Thiago Martins Desenvolvedor">
+        <meta property="og:description" content="Crie um Site e prepare a sua empresa para vender mais! 🚀">
+        <meta property="og:title" content="Site Vitalício">
+        <meta property="og:type" content="Serviços sobre as tecnologias de desenvolvimento de sistemas, incluindo serviços e produtos.">
+        <meta property="og:site_name" content="Stdio Comunicação">
+        <meta name="googlebot" content="Desenvolvimento de sites em Sorocaba" />
+    .   <meta name="googlebot" content="Comprar sites em Sorocaba" />
+    .   <meta name="googlebot" content="Criar site" />
+        <meta name="googlebot" content="STDIO SOROCABA" />
+        <meta name="twitter:card" content="Serviços sobre as tecnologias da Web aberta, incluindo serviços e produtos.">
+        <meta name="twitter:image" content="assets/images/catsa.jpeg">
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,700" rel="stylesheet">
+        <link rel="apple-touch-icon" href="assets/images/verificado.png">
+
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
+
+
+        <!--For Plugins external css-->
+        <link rel="stylesheet" href="assets/css/plugins.css" />
+        <link rel="stylesheet" href="assets/css/roboto-webfont.css" />
+
+        <!--Theme custom css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!--Theme Responsive css-->
+        <link rel="stylesheet" href="assets/css/responsive.css" />
+
+        <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-G1S3WFDDYD"></script>
+            <script>
+             window.dataLayer = window.dataLayer || [];
+             function gtag(){dataLayer.push(arguments);}
+             gtag('js', new Date());
+
+             gtag('config', 'G-G1S3WFDDYD');
+            </script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+		<div class='preloader'><div class='loaded'>&nbsp;</div></div>
+        <!-- Sections -->
+        <section id="social" class="social">
+            <div class="container">
+                <!-- Example row of columns -->
+                <div class="row">
+                    <div class="social-wrapper">
+                        <div class="col-md-6">
+                            <!--div class="social-icon">
+                                <a href="https://www.facebook.com/departamento.stdio?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
+                                <a href="https://wa.link/id8viu"><i class="fa fa-whatsapp"></i></a>
+                                <a href="https://instagram.com/stdio.desenvolvinento?igshid=MzNlNGNkZWQ4Mg=="><i class="fa fa-instagram"></i></a>
+                                <a href="https://github.com/shoppingdosite"><i class="fa fa-github"></i></a>
+                            </div-->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="social-contact">
+                                <a href="https://wa.link/id8viu"><i class="fa fa-phone"></i>+55 15 99677-8670</a>
+                                <a href="mailto:thiago.stdio@gmail.com"><i class="fa fa-envelope"></i>stdio.desenvolvimento</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /container -->       
+        </section>
+
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Navegação</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="https://wa.link/id8viu"><img src="assets/images/logo.png" alt="Logo" /></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="#home">Início</a></li>
+                        <li><a href="https://wa.link/id8viu">Saiba Mais</a></li>
+                        <!--li><a href="#service">Serviços</a></li>
+                        <li><a href="#price">Comentários</a></li>
+                        <li><a href="#business">Conteúdo</a></li>
+                        <li><a href="#contact">Contato</a></li-->
+                        <li class="login"><a href="https://github.com/topics/login">Login</a></li>
+                    </ul>
+
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <!--Home page style-->
+        <header id="home" class="home">
+            <div class="overlay-fluid-block">
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="home-wrapper">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="home-content">
+
+                                    <h1>SHOPPING DE SITES 🚀🚀🚀</h1>
+                                    
+                                    <h2></H2>
+
+                                    <div class="row">
+                                        <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
+                                            <div class="home-contact">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" placeholder="SEU MELHOR EMAIL">
+                                                    <input type="submit" class="form-control" value="ENCAMINHAR">
+
+                                                </div> <!---/ input-group --->
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>			
+            </div>
+
+        </header>
+
+        <!-- Sections -->
+        <section id="features" class="features sections">
+            <div class="container">
+                <div class="row">
+                    <div class="main_features_content2">
+                        <div class="col-sm-6">
+                            <div class="single_features_left text-center">
+                                <img src="assets/images/feature-1.png" alt="" />
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 margin-top-60">
+                            <div class="single_features_right ">
+                                
+                                <h1>Site Vitalício</h1>
+                                <h2>Pague UMA única vez duração pra toda vida!</h2>
+                                  <p>  ✅ Personalizado com criativos</p>
+                                  <p>  ✅️ Copys e Métricas que convertem</p>
+                                  <p>  ✅️ Menor custo no CPC</p>
+                                  <p>  ✅ Landingpage com engajamento</p>
+                                  <p>  ✅ Logo</p>
+                                  <p>  ✅ Formulário e Funil de vendas
+                                  <p>  ✅ Código responsivo e interativo</p>
+                                  <p>  ✅️ Landing Page todos os nichos</p>
+                
+                                <ul>
+                                   
+                                </ul>
+                                <div class="features_buttom">
+                                    <a href="https://wa.link/id8viu" class="btn btn-default"><h5>VER MAIS</h5></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section><!--End of Features 2 Section -->
+        <section id="features" class="features sections">
+            <div class="container">
+                <div class="row">
+                    <div class="main_features_content2">
+
+                        <div class="col-sm-6 margin-top-60">
+                            <div class="single_features_right ">
+                                <h1>Obtenha um site</h1>
+                                <h2>Completo com tudo isso e muito mais</h2>
+                                    <p><img src="assets/images/verificado50.png" alt="" /> Ganhe o selo de verificado</p>
+                                    <p>  ✅ Site One Page</p>
+                                    <p>  ✅ Blogs</p>
+                                    <p>  ✅ Plugins Para Turbinar Seus Sites</p>
+                                    <p>  ✅ Site para Advogados</p>
+                                    <p>  ✅ Cartão Virtual</p>
+                                    <p>  ✅ Portal de Notícias</p>
+                                    <p>  ✅ Página de Captura com MailChimp</p>
+                                    <p>  ✅ Página de Vendas para E-books</p>
+                                    <p>  ✅ CSS Personalizado </p>
+                                    <p>  ✅ SEO Otimização para o Google</p>
+                                    <p>  ✅ Assinatura de E-mail</p>
+                                    <p>  ✅ Site Multilíngue</p>
+                                </ul>
+                                <div class="features_buttom">
+                                    <a href="https://wa.link/id8viu" class="btn btn-default"><h5>VER MAIS</h5></a>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-sm-6">
+                            <div class="single_features_left text-center">
+                                <img src="assets/images/feature-2.png" alt="" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+        </section><!--End of Features 2 Section -->
+         <!-- Sections -->
+
+        
+
+
+        <section id="service" class="service2 sections lightbg">
+            <div class="container">
+                <div class="row">
+                    <div class="main_service2">
+                        <div class="head_title text-center">
+                            <h2>SITE PARA TODO O SEMPRE</h2>
+                            <p>Já pensou pagar uma única vez, e ter um site para sempre ?!??</p>
+                        </div>
+
+                        <div class="service_content">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="single_service2">
+                                    <div class="single_service_left">
+                                        <img src="assets/images/flaticon1.png" alt="" />
+                                    </div>
+                                    <div class="single_service_right">
+                                        <h2>Chekout Transparente</h2>
+                                        <p>Encaminhe emails automáticoS lembrando seu cliente do carrinho</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="single_service2">
+                                    <div class="single_service_left">
+                                       <img src="assets/images/flaticon2.png" alt="" />
+                                    </div>
+                                    <div class="single_service_right">
+                                        <h2>Copywrite</h2>
+                                        <p>Textos chamativos, e que convertem, obtenha resultados, afinal um site vende!</p>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End of Service2 Section -->		
+
+
+
+        <!-- Sections -->
+        <section id="price" class="price sections">
+
+            <section id="features" class="features sections">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_features_content2">
+    
+                            <div class="head_title text-center">
+                                <h1>Crie seu site profissional</h1>
+                             
+                           
+                                <p>Ganhe o selo de verificação no Instagram e Facebook</p>
+                                <div class="features_buttom">
+                                    <img src="assets/images/verificado.png" alt="" />
+                                </div>
+                            
+    
+                            <div class="col-sm-6">
+                                <div class="single_features_left text-center">
+                                    <img src="assets/images/ps4.jpeg" alt="" />
+                                    <img src="assets/images/ps2.jpeg" alt="" />
+                                </div>
+                            </div>
+    
+    
+                             <div class="col-sm-6">
+                                <div class="single_features_left text-center">
+                                    <img src="assets/images/ps5.jpeg" alt="" />
+                                    <img src="assets/images/ps3.jpeg" alt="" />
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </section><!--End of Features 2 Section -->
+            <div class="head_title text-center">
+                <h2>Satisfação ou seu dinheiro de volta</h2>
+                <div class="features_buttom">
+                    <img src="" alt="" />
+                    <img src="assets/images/ver1.jpg" alt="" />
+                    <img src="assets/images/ver3.jpg" alt="" />
+                    <img src="assets/images/ver4.jpg" alt="" />
+                </div>            </div>
+            <!-- Example row of columns -->
+            <div class="cd-pricing-container cd-has-margins">
+                <div class="cd-pricing-switcher">
+                    <p class="fieldset">
+                        <input type="radio" name="duration-2" value="monthly" id="monthly-2" checked>
+                        <label for="monthly-2">EXECUTIVO</label>
+                        <input type="radio" name="duration-2" value="yearly" id="yearly-2">
+                        <label for="yearly-2">WEB 5.0</label>
+                        <span class="cd-switch"></span>
+                    </p>
+                </div> <!-- .cd-pricing-switcher -->
+
+                <ul class="cd-pricing-list cd-bounce-invert">
+                    <li>
+                        <ul class="cd-pricing-wrapper">
+                            <li data-type="monthly" class="is-visible">
+                                <header class="cd-pricing-header">
+                                    <h2>Básico</h2>
+
+                                    <div class="cd-price">
+                                        <span class="cd-currency">R$</span>
+                                        <span class="cd-value">320,00</span>
+                                        <span class="cd-duration">ANO</span>
+                                    </div>
+                                </header> <!-- .cd-pricing-header -->
+
+                                <div class="cd-pricing-body">
+                                    <ul class="cd-pricing-features">
+                                        <li><em><i class="fa fa-check-circle"></i></em>20 Backlinks</li>
+                                        <li><em><i class="fa fa-check-circle"></i></em>Relatórios</li>
+                                        <li><em><i class="fa fa-check-circle"></i></em>Criativos</li>
+                                        <li><em><i class="fa fa-remove"></i></em>+100k de Impressão </li>
+
+                                    </ul>
+                                </div> <!-- .cd-pricing-body -->
+
+                                <footer class="cd-pricing-footer">
+                                    <a class="cd-select" href="https://wa.link/id8viu"><h5>COMPRAR</h5></a>
+                                </footer>  <!-- .cd-pricing-footer -->
+                            </li>
+
+                            <li data-type="yearly" class="is-hidden">
+                                <header class="cd-pricing-header">
+                                    <h2>Básico</h2>
+
+                                    <div class="cd-price">
+                                        <span class="cd-currency">R$</span>
+                                        <span class="cd-value">420,00</span>
+                                        <span class="cd-duration">ANO</span>
+                                    </div>
+                                </header> <!-- .cd-pricing-header -->
+
+                                <div class="cd-pricing-body">
+                                    <ul class="cd-pricing-features">
+                                        <li><em><i class="fa fa-check-circle"></i></em>20 Backlinks</li>
+                                        <li><em><i class="fa fa-check-circle"></i></em>Relatórios</li>
+                                        <li><em><i class="fa fa-check-circle"></i></em>Criativos</li>
+                                        <li><em><i class="fa fa-check-circle"></i></em>+100k de Impressão </li>
+
+                                    </ul>
+                                </div> <!-- .cd-pricing-body -->
+
+                                <footer class="cd-pricing-footer">
+                                    <a class="cd-select" href="https://wa.link/id8viu"><h5>SAIBA MAIS</h5></a>
+                                </footer>  <!-- .cd-pricing-footer -->
+                            </li>
+                        </ul> <!-- .cd-pricing-wrapper -->
+                    </li>
+
+                    <li class="cd-popular">
+                        <ul class="cd-pricing-wrapper">
+                            <li data-type="monthly" class="is-visible">
+                                <header class="cd-pricing-header">
+                                    <h2>Popular</h2>
+                                    <div class="cd-price">
+                                        <span class="cd-currency">R$</span>
+                                        <span class="cd-value">299,00</span>
+                                        <span class="cd-duration"><H5>SAIBA MAIS</5></span>
+                                    </div>
+                                </header> <!-- .cd-pricing-header -->
+
+                                <div class="cd-pricing-body">
+                                    <ul class="cd-pricing-features">
+                                        <li><em><i class="fa fa-check-circle"></i></em>Site Vitalício</li>
+                                        <li><em><i class="fa fa-check-circle"></i></em>Relatórios</li>
+                                        <li><em><i class="fa fa-check-circle"></i></em>+5k de Impressão </li>
+                                        <li><em><i class="fa fa-remove"></i></em>Domínio</li>
+
+                                    </ul>
+                                </div> <!-- .cd-pricing-body -->
+
+                                <footer class="cd-pricing-footer">
+                                    <a class="cd-select" href="https://wa.link/id8viu"><h5>SAIBA MAIS</h5></a>
+                                </footer>  <!-- .cd-pricing-footer -->
+                            </li>
+
+                            <li data-type="yearly" class="is-hidden">
+                                <header class="cd-pricing-header">
+                                    <h2>Popular</h2>
+
+                                    <div class="cd-price">
+                                        <span class="cd-currency">R$</span>
+                                        <span class="cd-value">399,00</span>
+                                        <span class="cd-duration">SITE VITALÍCIO</span>
+                                    </div>
+                                </header> <!-- .cd-pricing-header -->
+
+                                <div class="cd-pricing-body">
+                                    <ul class="cd-pricing-features">
+                                        <li><em><i class="fa fa-check-circle"></i></em>Site Vitalício</li>
+                                        <li><em><i class="fa fa-check-circle"></i></em>Relatórios</li>
+                                        <li><em><i class="fa fa-check-circle"></i></em>+5k de Impressão </li>
+                                        <li><em><i class="fa fa-remove"></i></em>Domínio</li>
+
+                                    </ul>
+                                </div> <!-- .cd-pricing-body -->
+
+                                <footer class="cd-pricing-footer">
+                                    <a class="cd-select" href="https://wa.link/id8viu"><h5>SAIBA MAIS</h5></a>
+                                </footer>  <!-- .cd-pricing-footer -->
+                            </li>
+                        </ul> <!-- .cd-pricing-wrapper -->
+                    </li>
+
+                    <li>
+                        <ul class="cd-pricing-wrapper">
+                            <li data-type="monthly" class="is-visible">
+                                <header class="cd-pricing-header">
+                                    <h2>Premier</h2>
+
+                                    <div class="cd-price">
+                                        <span class="cd-currency">R$</span>
+                                        <span class="cd-value">1.950,00</span>
+                                        <span class="cd-duration">ANO</span>
+                                    </div>
+                                </header> <!-- .cd-pricing-header -->
+
+                                <div class="cd-pricing-body">
+                                    <ul class="cd-pricing-features">
+                                        <li><em><i class="fa fa-check-circle"></i></em>+100K Impressão</li>
+                                        <li><em><i class="fa fa-check-circle"></i></em>Relatório em tempo real</li>
+                                        <li><em><i class="fa fa-check-circle"></i></em>Acesso vitalício</li>
+                                        <li><em><i class="fa fa-remove"></i></em>Criativos</li>
+
+                                    </ul>
+                                </div> <!-- .cd-pricing-body -->
+
+                                <footer class="cd-pricing-footer">
+                                    <a class="cd-select" href="https://wa.link/id8viu"><h5>SAIBA MAIS</h5></a>
+                                </footer>  <!-- .cd-pricing-footer -->
+                            </li>
+
+                            <li data-type="yearly" class="is-hidden">
+                                <header class="cd-pricing-header">
+                                    <h2>Premier</h2>
+
+                                    <div class="cd-price">
+                                        <span class="cd-currency">R$</span>
+                                        <span class="cd-value">1.950,00</span>
+                                        <span class="cd-duration">ANO</span>
+                                    </div>
+                                </header> <!-- .cd-pricing-header -->
+
+                                <div class="cd-pricing-body">
+                                    <ul class="cd-pricing-features">
+                                        <li><em><i class="fa fa-check-circle"></i></em>+200K Impressão</li>
+                                        <li><em><i class="fa fa-check-circle"></i></em>Relatório em tempo real</li>
+                                        <li><em><i class="fa fa-check-circle"></i></em>Acesso vitalício</li>
+                                        <li><em><i class="fa fa-check-circle"></i></em>Criativos</li>
+
+                                    </ul>
+                                </div> <!-- .cd-pricing-body -->
+
+                                <footer class="cd-pricing-footer">
+                                    <a class="cd-select" href="https://wa.link/id8viu"><h5>SAIBA MAIS</h5></a>
+                                </footer>  <!-- .cd-pricing-footer -->
+                            </li>
+                        </ul> <!-- .cd-pricing-wrapper -->
+                    </li>
+                </ul> <!-- .cd-pricing-list -->
+            </div> <!-- .cd-pricing-container -->	
+
+        </section>
+
+        <!-- Sections -->
+        <section id="business" class="portfolio sections">
+            <div class="container">
+                <div class="head_title text-center">
+                    <h1>Nós vamos te entregar</h1>
+					<p>todo esse universo digital</p>
+                </div>
+
+                <div class="row">
+                    <div class="portfolio-wrapper text-center">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="community-edition">
+                                <i class="fa fa-book"></i>
+                                <div class="separator"></div>
+                                <h4>COPYWRITE</h4>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="community-edition">
+                                <i class="fa fa-bug"></i>
+                                <div class="separator"></div>
+                                <h4>ANTI-BLOCK</h4>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="community-edition">
+                                <i class="fa fa-gears"></i>
+                                <div class="separator"></div>
+                                <h4>REVISÃO</h4>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="community-edition">
+                                <i class="fa fa-external-link"></i>
+                                <div class="separator"></div>
+                                <h4>TRÁFEGO DIRETO</h4>
+                                <p></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Example row of columns -->
+                <div class="row">
+                    <div class="portfolio-wrapper2 text-center">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="community-edition">
+                                <i class="fa fa-coffee"></i>
+                                <div class="separator"></div>
+                                <h4>Relatórios</h4>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="community-edition">
+                                <i class="fa fa-tree"></i>
+                                <div class="separator"></div>
+                                <h4>Foco</h4>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="community-edition">
+                                <i class="fa fa-paper-plane-o"></i>
+                                <div class="separator"></div>
+                                <h4>Leads</h4>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="community-edition">
+                                <i class="fa fa-folder-open"></i>
+                                <div class="separator"></div>
+                                <h4>Temas</h4>
+                                <p></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div> <!-- /container -->       
+        </section>
+
+
+        <section id="contact" class="contact sections">
+            <div class="container">
+                <div class="row">
+                    <div class="main_contact whitebackground">
+                        <div class="head_title text-center">
+                            <h2>ENTRE EM CONTATO</h2>
+							<p>Quer tirar suas dúvidas, pode nos visitar pelo whatsapp ou por email!</p>
+                        </div>
+                        <div class="contact_content">
+                            <div class="col-md-6">
+                                <div class="single_left_contact">
+                                    <form action="#" id="formid">
+
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="name" placeholder="Primeiro Nome" required="">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" name="email" placeholder="Email Válido" required="">
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <textarea class="form-control" name="message" rows="8" placeholder="Sua Mensagem"></textarea>
+                                        </div>
+
+                                        <div class="center-content">
+                                            <input type="submit" value="Enviar" class="btn btn-default">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="single_right_contact">
+                                    <p>.</p>
+
+                                    <div class="contact_address margin-top-40">
+                                        <span>São Paulo Brasil</span>
+                                        <span>Jd. São Guilherme.</span> 
+                                        <span class="margin-top-20"><a href="https://wa.link/id8viu">Whats 15 996778670</a></span> 
+                                    </div>
+
+                                    <div class="contact_socail_bookmark">
+                                        <a href=""><i class="fa fa-facebook"></i></a>
+                                        <a href=""><i class="fa fa-instagram"></i></a>
+                                        <a href="https://wa.link/id8viu"><i class="fa fa-whatsapp"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End of Contact Section -->
+
+
+        <section id="footer-menu" class="sections footer-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-menu-wrapper">
+
+                        <div class="col-md-8 col-sm-12 col-xs-12">
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="menu-item">
+                                    <h5>Outros Links</h5>
+                                    <ul>
+                                        <a href="#"><li>POWER BI DESKTOP</a></li>
+                                        <a href="#"><li>MOBILE</a></li>
+                                        <a href="#"><li>SEE ALL DOWNLOADS</a></li>
+                                        <a href="#"><li>POWER BI DESKTOP</a></li>
+                                        <a href="#"><li>MOBILE</a></li>
+                                        <a href="#"><li>SEE ALL DOWNLOADS</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="menu-item">
+                                    <h5>Políticas</h5>
+                                    <ul>
+                                        <a href="#"><li>TERMOS DE USO</a></li>
+                                        <a href="#"><li>AVISO LEGAL</a></li>
+                                        <a href="#"><li>POLITICA DE TERMOS E CONDIÇÕES</a></li>
+                                        <a href="#"><li>POLITICA DE PRIVACIDADE</a></li>
+                                        <a href="#"><li>POLITICA DE REEMBOLSO</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="menu-item">
+                                    <h5>Informações</h5>
+                                    <ul>
+                                        <a href="#"><li>SUPORTE</a></li>
+                                        <a href="#"><li>DESENVOLVEDORES</a></li>
+                                        <a href="#"><li>PORTFÓLIO</a></li>
+                                        <a href="#"><li>EMAIL</a></li>
+                                        <a href="#"><li>ANALISE EM TEMPO REAL</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="menu-item">
+                                <h5>Assinar</h5>
+                                <p>Receber Insights de graça no seu email</p>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Cadastre seu melhor email">
+                                    <input type="submit" class="form-control" value="Receber">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--Footer-->
+        <footer id="footer" class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-wrapper">
+
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="footer-brand">
+                                <img src="assets/images/logo.png" alt="logo" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="copyright">
+                                <p>Criado <i class="fa fa-heart"></i> por <a  href="https://wa.link/id8viu"> Thiago Martins </a>2023. All rights reserved Stdio Desenvolvimento.</p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+		
+		
+		<div class="scrollup">
+			<a href="https://wa.link/id8viu"><i class="fa fa-coffee">.</i></a>
+		</div>
+
+
+        <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="assets/js/vendor/bootstrap.min.js"></script>
+
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/modernizr.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
