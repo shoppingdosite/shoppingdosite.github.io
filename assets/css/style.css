@@ -1229,7 +1229,7 @@ textarea::-ms-input-placeholder
     overflow: hidden;
     text-indent: 100%;
     white-space: nowrap;
-    color:#000;
+    color:#ffffff;
 }
 @media only screen and (min-width: 320px) {
     .cd-select {
@@ -1237,21 +1237,21 @@ textarea::-ms-input-placeholder
         display: inline-block;
         height: auto;
         padding: 1.3em 3em;
-        color: #000;
+        color: #fcfcfc;
         border-radius: 2px;
         font-size: 1rem;
         text-indent: 0;
         text-transform: uppercase;
     }
     .no-touch .cd-select:hover {
-        color: #112e3c;
+        color: #f8f8f8;
     }
     .cd-popular .cd-select {
-        color: #ededed;
-        background: rgb(21, 43, 165);
+        color: #ffffff;
+        background: rgb(34, 67, 253);
     }
     .no-touch .cd-popular .cd-select:hover {
-        color:#000;
+        color:#ebe0e0;
     }
     .cd-secondary-theme .cd-popular .cd-select {
         color: #0c1f28;
