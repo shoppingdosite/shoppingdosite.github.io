@@ -340,7 +340,7 @@ Button
 }
 
 .btn-default {
-    border-radius: 0px;
+    border-radius: 100px;
     background: rgb(60, 82, 207);
     color: #ededed;
     border: 0;
